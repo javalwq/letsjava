@@ -1,26 +1,30 @@
 package com.alemon.beginer.service;
 
-public class PersonService implements LifeCycle{
+import com.alemon.beginer.pojo.Person;
+import com.alemon.beginer.pojo.annotation.Monitor;
 
-	public void start() {
-		// TODO Auto-generated method stub
+public class PersonService implements LifeCycle<Person>{
+
+	@Monitor("test")
+	public void start(Person p) {
+		System.out.println("start");
+		System.out.println("current person is :" +  p.toString());
 		
 	}
-
+	
 	public void growup() {
-		// TODO Auto-generated method stub
+		System.out.println("growup");
 		
 	}
 
 	public void study() {
-		// TODO Auto-generated method stub
+		System.out.println("study");
 		
 	}
 
 	public void end() {
-		// TODO Auto-generated method stub
+		System.out.println("end");
 		
 	}
-	
 	
 }
