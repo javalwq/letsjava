@@ -12,6 +12,7 @@ public class StringTest {
 
     /**
      * String类的存储结构 工具javap -c 'class' 查看字节码
+     * 参考 https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.invokespecial
      * 1. string = 'abcdf'; 占用多少字节
      * 2. string = 'abcdf' + 'f';占用多少字节?
      */
