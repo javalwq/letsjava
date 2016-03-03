@@ -48,6 +48,7 @@ public class ReflectTest {
 		Field nameField = clazz.getDeclaredField("name");
 		nameField.setAccessible(true);//private属性需要设置
 		nameField.set(p, "alemon");
+		nameField.setAccessible(false);//再改回原来的可访问性
 		System.out.println("name change = " + p.getName());
 	}
 	
@@ -66,6 +67,8 @@ public class ReflectTest {
 		p.setName("alemon");
 		Class clazz = PersonService.class;
 		Method method = clazz.getDeclaredMethod("start", Person.class);
+		Method mm = clazz.getDeclaredMethod("end", null);
+		mm.invoke(clazz.newInstance(), null);
 		method.invoke(clazz.newInstance(), p);
 	}
 	
