@@ -127,8 +127,8 @@ public class ReflectTest {
 			}
 			
 		});
-		//proxyl.start(p);
-		proxyl.end();
+		proxyl.start(p);
+		//proxyl.end();
 	}
 	
 	
