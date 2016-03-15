@@ -93,7 +93,20 @@ public class StringTest {
             i++;
             str = str + "almon"; // 用多少字节：5*2,创建了几次对象.创建了一个StringBuilder对象
             stringBuilder.append("almon"); // 16*2用了多少字节：16*2,进行几次扩容:不扩容
+
+            // StringBuilder sb = new StringBuilder();
+            // sb.append(str);
+            // sb.append("almon")
+            // sb.tostring
+            str = str + "almon"; // 用多少字节,创建了几次对象.
+//            stringBuilder.append("almon"); // 用了多少字节,进行几次扩容
         }
+
+        System.out.println("");
+
+        String str1 = new String("lew");
+        String str2 = "almon";
+        String str3 = str2 + str1;
     }
 
     /*@Test
@@ -106,4 +119,24 @@ public class StringTest {
             // 会内存溢出吗?
         }
     }*/
+
+    @Test
+    public void testEqual() {
+        String str1 = "almon";
+        String str2 = "a";
+        String str3 = "lmon";
+        String str4 = "a" + "lmon";
+        String str5 = str2 + str3;
+        System.out.print(str5 == str4);
+//        String str2 = "almon";
+//        System.out.println(str1 == str2);
+//        System.out.println("b" == "a");
+//        System.out.println("a".equals("a"));
+       //String str1 = new String("a");
+//        StringBuilder sb = new StringBuilder("a");
+          //String str2 = new String(("a"));
+         // String str3 = "bb" + str1;
+//        System.out.println(str1 == str2);
+////        System.out.println(str1.equals(str2));
+    }
 }
