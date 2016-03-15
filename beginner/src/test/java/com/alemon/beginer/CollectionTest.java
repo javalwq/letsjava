@@ -103,11 +103,11 @@ public class CollectionTest {
         p2.setName("alemon");
         Person p3 = new Person();
         p3.setName("alemon");
-        System.out.println(p1.hashCode());
+       /* System.out.println(p1.hashCode());
         System.out.println(p2.hashCode());
-        System.out.println(p3.hashCode());
+        System.out.println(p3.hashCode());*/
         // todo 打印名称非重复的的person实例
-       /* HashSet<Person> h = new HashSet<Person>();
+        HashSet<Person> h = new HashSet<Person>();
         h.add(p1);
         h.add(p2);
         h.add(p3);
@@ -115,7 +115,6 @@ public class CollectionTest {
         while(it.hasNext()){
         	System.out.println(it.next());
         }
-        */
     }
     
     /**
